@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rustem.quadraticequation.MainActivity">
+
+
+    <EditText
+        android:id="@+id/aTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="a"
+        android:layout_marginTop="62dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/bTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="b"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_above="@+id/cTxt"
+        android:layout_alignStart="@+id/aTxt"
+        android:layout_marginBottom="42dp" />
+
+    <EditText
+        android:id="@+id/cTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="c"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/bTxt"
+        android:imeOptions="actionDone"
+        />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="Button" />
+
+    <EditText
+        android:id="@+id/resultView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cTxt"
+        android:layout_below="@+id/calcButton"
+        android:layout_marginTop="42dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textMultiLine" />
+
+</RelativeLayout>
