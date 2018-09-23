@@ -4,6 +4,7 @@ import android.provider.Contacts;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -48,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "One of the input field wasn't filled with number", Toast.LENGTH_LONG);
 
                 }
-
+                //Close the keyboard after clicking the calculate button
+                cTxt.onEditorAction(EditorInfo.IME_ACTION_DONE);
             }
         });
 

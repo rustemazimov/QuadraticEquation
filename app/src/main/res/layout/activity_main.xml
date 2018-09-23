@@ -30,7 +30,8 @@
                 android:digits="0123456789-."
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_weight="0.33" />
+                android:layout_weight="0.33"
+                android:imeOptions="actionNext"/>
 
             <EditText
                 android:id="@+id/bTxt"
@@ -42,7 +43,8 @@
                 android:ems="10"
                 android:hint="b"
                 android:inputType="numberDecimal"
-                android:layout_weight="0.33" />
+                android:layout_weight="0.33"
+                android:imeOptions="actionNext"/>
 
             <EditText
                 android:id="@+id/cTxt"
@@ -64,9 +66,10 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/cTxt"
             android:layout_centerHorizontal="true"
-            android:text="Find\nRoots"
+            android:text="Find\nRoot(s)"
             android:layout_margin="5dp"
-            android:layout_weight="0.30"/>
+            android:layout_weight="0.30"
+            />
     </LinearLayout>
 
     <EditText
