@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 //Close the keyboard after clicking the calculate button
+                aTxt.onEditorAction(EditorInfo.IME_ACTION_DONE);
+                bTxt.onEditorAction(EditorInfo.IME_ACTION_DONE);
                 cTxt.onEditorAction(EditorInfo.IME_ACTION_DONE);
             }
         });
