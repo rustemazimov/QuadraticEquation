@@ -1,68 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rustem.quadraticequation.MainActivity">
+    android:weightSum="1"
+    android:layout_margin="5dp">
 
-
-    <EditText
-        android:id="@+id/aTxt"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="a"
-        android:layout_marginTop="62dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:digits="0123456789-."
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:orientation="horizontal"
+        android:layout_weight="0.60"
+        android:weightSum="1">
 
-    <EditText
-        android:id="@+id/bTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="b"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:digits="0123456789-."
-        android:layout_above="@+id/cTxt"
-        android:layout_alignStart="@+id/aTxt"
-        android:layout_marginBottom="42dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.60"
+            android:weightSum="1"
+            android:layout_margin="10dp">
 
-    <EditText
-        android:id="@+id/cTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="c"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:digits="0123456789-."
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/bTxt"
-        android:imeOptions="actionDone"
-        />
+            <EditText
+                android:id="@+id/aTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="a"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:digits="0123456789-."
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="0.33" />
 
-    <Button
-        android:id="@+id/calcButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cTxt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
-        android:text="Button" />
+            <EditText
+                android:id="@+id/bTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cTxt"
+                android:layout_alignStart="@+id/aTxt"
+                android:digits="0123456789-."
+                android:ems="10"
+                android:hint="b"
+                android:inputType="numberDecimal"
+                android:layout_weight="0.33" />
+
+            <EditText
+                android:id="@+id/cTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="c"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:digits="0123456789-."
+                android:layout_centerVertical="true"
+                android:layout_alignStart="@+id/bTxt"
+                android:imeOptions="actionDone"
+                android:layout_weight="0.33" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calcButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cTxt"
+            android:layout_centerHorizontal="true"
+            android:text="Find\nRoots"
+            android:layout_margin="5dp"
+            android:layout_weight="0.30"/>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/resultView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/cTxt"
         android:layout_below="@+id/calcButton"
-        android:layout_marginTop="42dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:enabled="false"
-        android:inputType="textMultiLine" />
-
-</RelativeLayout>
+        android:inputType="textMultiLine"
+        android:layout_weight="0.40"
+        android:textAlignment="center"/>
+</LinearLayout>
